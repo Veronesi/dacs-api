@@ -81,7 +81,7 @@ public class TicketController {
         // buscamos al usuario
         Jwt jwt = (Jwt) authentication.getPrincipal();
         String userId = jwt.getClaim("sub"); // Obtener el ID del usuario (sub)
-        System.out.println(estadoDTO.getTicketId());
+
         Usuario autor = usuarioRepository.findByUuid(userId)
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 

@@ -13,7 +13,7 @@ public class KeycloakProvider {
     private static final String ADMIN_CLI = "admin-cli";
     private static final String USER_CONSOLE = "admin";
     private static final String USER_PASSWORD = "admin";
-    private static final String CLIENT_SECRET = "9Vrr75ke3XmJVNftiCQgEdv1N3NycLIu";
+    private static final String CLIENT_SECRET = "eKiB2A1sJUjUPf8Mf3WER2gG0OgpTFyZ";
 
     public static RealmResource getRealmResources() {
         Keycloak keycloak = KeycloakBuilder.builder()
