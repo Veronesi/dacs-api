@@ -33,9 +33,9 @@ public class KeycloakController {
     @Autowired
     private IKeycloakService keycloakService;
 
-    @PostMapping("/create")
+    @PostMapping("/create-kk")
     @PermitAll
-    public ResponseEntity<?> createUser(@RequestBody UserDTO userDTO) throws URISyntaxException, ParseException {
+    public ResponseEntity<?> createUserKk(@RequestBody UserDTO userDTO) throws URISyntaxException, ParseException {
         UserDTO response = keycloakService.createUser(userDTO);
 
         Usuario usuario = new Usuario();
@@ -54,6 +54,28 @@ public class KeycloakController {
 
         usuarioRepository.save(usuario);
         return ResponseEntity.created(new URI("/keycloak/user/create")).body(response);
+    }
+
+    @PostMapping("/create")
+    @PermitAll
+    public Usuario createUser(@RequestBody UserDTO userDTO) throws URISyntaxException, ParseException {
+
+        Usuario usuario = new Usuario();
+        usuario.setNombre(userDTO.getFirstName());
+        usuario.setApellido(userDTO.getLastName());
+        usuario.setEmail(userDTO.getEmail());
+        usuario.setNombre(userDTO.getUsername());
+        usuario.setUuid(userDTO.getUuid());
+        usuario.setDireccion(userDTO.getDireccion());
+        usuario.setDni(userDTO.getDni());
+        DateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+        Date date = formatter.parse(userDTO.getFechaNacimiento());
+        usuario.setFechaNacimiento(date);
+        Rol rol = rolRepository.findById(2).orElseThrow();
+        usuario.setRol(rol);
+
+        usuarioRepository.save(usuario);
+        return usuario;
     }
 
     @PreAuthorize("hasRole('admin_client')")
