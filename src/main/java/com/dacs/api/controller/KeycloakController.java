@@ -2,13 +2,11 @@ package com.dacs.api.controller;
 
 import com.dacs.api.dto.UserDTO;
 import com.dacs.api.model.entity.Rol;
-import com.dacs.api.model.entity.Roles;
 import com.dacs.api.model.entity.Usuario;
 import com.dacs.api.model.repository.RolRepository;
 import com.dacs.api.model.repository.UsuarioRepository;
 import com.dacs.api.service.IKeycloakService;
 
-import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

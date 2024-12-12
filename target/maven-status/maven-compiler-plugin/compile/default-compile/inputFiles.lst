@@ -3,10 +3,12 @@
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/config/JwtAuthentificationConverter.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/config/SecurityConfig.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/controller/KeycloakController.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/controller/MapboxController.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/controller/RolController.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/controller/TestController.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/controller/TicketController.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/controller/UsuarioController.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/dto/Coords.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/dto/EstadoDTO.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/dto/TicketDTO.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/dto/UserDTO.java
@@ -20,6 +22,16 @@
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/Roles.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/Ticket.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/Usuario.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Context.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Coordinates.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Country.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Feature.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Geometry.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/MapboxCoords.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Place.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Properties.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Region.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Street.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/repository/DependenciaRepository.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/repository/EstadoRepository.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/repository/PrioridadRepository.java
@@ -28,5 +40,6 @@
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/repository/UsuarioRepository.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/types/Direccion.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/service/IKeycloakService.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/service/MapboxService.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/service/impl/IKeycloakServiceImpl.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/util/KeycloakProvider.java

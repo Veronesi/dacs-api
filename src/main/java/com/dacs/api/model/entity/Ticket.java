@@ -21,8 +21,8 @@ public class Ticket {
     private Integer id;
 
     private String descripcion;
-    private Float latitud;
-    private Float longitud;
+    private Double latitud;
+    private Double longitud;
     private Float costoFinal;
     private Date fechaHora;
 
@@ -84,11 +84,11 @@ public class Ticket {
         return fechaHora;
     }
 
-    public Float getLatitud() {
+    public Double getLatitud() {
         return latitud;
     }
 
-    public Float getLongitud() {
+    public Double getLongitud() {
         return longitud;
     }
 
@@ -112,7 +112,7 @@ public class Ticket {
         this.fechaHora = fechaHora;
     }
 
-    public void setLatitud(Float latitud) {
+    public void setLatitud(Double latitud) {
         this.latitud = latitud;
     }
 
@@ -132,7 +132,7 @@ public class Ticket {
         this.estados = estados;
     }
 
-    public void setLongitud(Float longitud) {
+    public void setLongitud(Double longitud) {
         this.longitud = longitud;
     }
 

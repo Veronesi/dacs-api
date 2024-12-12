@@ -2,8 +2,8 @@ package com.dacs.api.dto;
 
 public class TicketDTO {
     private String descripcion;
-    private Float latitud;
-    private Float longitud;
+    private Double latitud;
+    private Double longitud;
     private Float costoFinal;
     private Integer creadoPorId;
     private Integer cambiadoPorId;
@@ -30,11 +30,11 @@ public class TicketDTO {
         return descripcion;
     }
 
-    public Float getLatitud() {
+    public Double getLatitud() {
         return latitud;
     }
 
-    public Float getLongitud() {
+    public Double getLongitud() {
         return longitud;
     }
 
@@ -62,11 +62,11 @@ public class TicketDTO {
         this.descripcion = descripcion;
     }
 
-    public void setLatitud(Float latitud) {
+    public void setLatitud(Double latitud) {
         this.latitud = latitud;
     }
 
-    public void setLongitud(Float longitud) {
+    public void setLongitud(Double longitud) {
         this.longitud = longitud;
     }
 
