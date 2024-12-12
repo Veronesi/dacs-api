@@ -43,6 +43,7 @@ public class SecurityConfig {
                         .requestMatchers("/keycloak/user/create").permitAll()
                         .anyRequest().authenticated())
                 .oauth2ResourceServer(oauth -> {
+                    System.out.print("entro");
                     oauth.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthentificationConverter));
                 })
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

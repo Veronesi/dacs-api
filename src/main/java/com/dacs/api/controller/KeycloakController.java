@@ -7,6 +7,8 @@ import com.dacs.api.model.repository.RolRepository;
 import com.dacs.api.model.repository.UsuarioRepository;
 import com.dacs.api.service.IKeycloakService;
 
+import jakarta.annotation.security.PermitAll;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,7 +23,6 @@ import java.util.Date;
 
 @RestController
 @RequestMapping("/keycloak/user")
-@PreAuthorize("hasRole('admin_client')")
 public class KeycloakController {
     @Autowired
     private RolRepository rolRepository;
@@ -32,17 +33,8 @@ public class KeycloakController {
     @Autowired
     private IKeycloakService keycloakService;
 
-    @GetMapping("/search")
-    public ResponseEntity<?> findAllUsers() {
-        return ResponseEntity.ok(keycloakService.findAllUsers());
-    }
-
-    @GetMapping("/search/{username}")
-    public ResponseEntity<?> searchUserByUsername(@PathVariable String username) {
-        return ResponseEntity.ok(keycloakService.searchUserByUsername(username));
-    }
-
     @PostMapping("/create")
+    @PermitAll
     public ResponseEntity<?> createUser(@RequestBody UserDTO userDTO) throws URISyntaxException, ParseException {
         UserDTO response = keycloakService.createUser(userDTO);
 
@@ -64,12 +56,26 @@ public class KeycloakController {
         return ResponseEntity.created(new URI("/keycloak/user/create")).body(response);
     }
 
+    @PreAuthorize("hasRole('admin_client')")
+    @GetMapping("/search")
+    public ResponseEntity<?> findAllUsers() {
+        return ResponseEntity.ok(keycloakService.findAllUsers());
+    }
+
+    @PreAuthorize("hasRole('admin_client')")
+    @GetMapping("/search/{username}")
+    public ResponseEntity<?> searchUserByUsername(@PathVariable String username) {
+        return ResponseEntity.ok(keycloakService.searchUserByUsername(username));
+    }
+
+    @PreAuthorize("hasRole('admin_client')")
     @PutMapping("/update/{userId}")
     public ResponseEntity<?> updateUser(@PathVariable String userId, @RequestBody UserDTO userDTO) {
         keycloakService.updateUser(userId, userDTO);
         return ResponseEntity.ok("User updated successfully");
     }
 
+    @PreAuthorize("hasRole('admin_client')")
     @DeleteMapping("/delete/{userId}")
     public ResponseEntity<?> deleteUser(@PathVariable String userId) {
         keycloakService.deleteUser(userId);
