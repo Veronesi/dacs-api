@@ -12,10 +12,11 @@ import com.dacs.api.service.MapboxService;
 @RequestMapping("/mapbox")
 @PreAuthorize("hasRole('user_client') or hasRole('admin_client')")
 public class MapboxController {
+    MapboxService mapboxService = new MapboxService();
+
     @PostMapping("/address-to-coords")
     public MapboxCoords addressToCoords(@RequestBody Coords request,
             @Value("${mapbox.access_token}") String ACCESS_TOKEN) {
-        MapboxService mapboxService = new MapboxService();
         MapboxCoords coords = mapboxService.getCoordinates(ACCESS_TOKEN, request.getAddress());
         return coords;
     }

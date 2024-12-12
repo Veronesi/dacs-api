@@ -22,6 +22,7 @@
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/Roles.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/Ticket.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/Usuario.java
+/Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/keycloak/OpenIdConnect.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Context.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Coordinates.java
 /Users/fanaes/Developer/tp-dacs/dacs-api/src/main/java/com/dacs/api/model/entity/mapbox/Country.java

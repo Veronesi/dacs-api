@@ -29,6 +29,7 @@ public class SecurityConfig {
                     configuration.setAllowedOrigins(Arrays.asList(
                             "http://localhost:4200",
                             "http://localhost:8080",
+                            "http://localhost:8081",
                             "http://localhost:3306",
                             "http://dacs2024"));
                     configuration.addAllowedMethod("GET");
@@ -43,7 +44,6 @@ public class SecurityConfig {
                         .requestMatchers("/keycloak/user/create").permitAll()
                         .anyRequest().authenticated())
                 .oauth2ResourceServer(oauth -> {
-                    System.out.print("entro");
                     oauth.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthentificationConverter));
                 })
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
